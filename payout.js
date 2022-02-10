@@ -37,3 +37,21 @@ class Player {
     }
 }
 
+function sbProps(obj, arr) {
+    for (const key in obj) {
+        payout(arr, key)
+    }
+    return arr.forEach(player => console.log(`${player.name} : ${player.winnings}`));
+}
+
+function payout(arr, key) {
+    let betWinners = [];
+
+    betWinners = arr.filter(winner => winner[key] === winningBets[key]);
+
+    let betPayout = arr.length / betWinners.length;
+
+    if (key === 'winner') betPayout *= 5;
+
+    betWinners.forEach(winner => winner['winnings'] += betPayout);
+}
