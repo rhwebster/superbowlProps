@@ -11,7 +11,7 @@ function sbProps(obj, arr) {
 function payout(arr, obj, key) {
     let betWinners = [];
 
-    betWinners = arr.filter(winner => winner[key] === obj[key]);
+    betWinners = arr.filter(player => player[key] === obj[key]);
 
     let betPayout = arr.length / betWinners.length;
 
