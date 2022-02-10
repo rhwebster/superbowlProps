@@ -1,24 +1,17 @@
-const Player = require('./player');
-
-const winningBets = {
-    coinToss: null, anthem: null, firstPlayer: null, firstPlay: null,
-    firstHalfPts: null, nonQB: null, performer: null, halftimeSongs: null,
-    snoopSmoke: null, thirdQtrScore: null, twoPt: null, dstTD: null, highQtr: null,
-    bitcoinPrice: null, oneFifty: null, longestPlay: null, kuppChase: null,
-    staffordBurrow: null, gatorade: null, mvp: null, winner: null
-}
+const bets = require('./bets');
+const players = require('./players');
 
 function sbProps(obj, arr) {
     for (const key in obj) {
-        payout(arr, key)
+        payout(arr, obj, key)
     }
     return arr.forEach(player => console.log(`${player.name} : ${player.winnings}`));
 }
 
-function payout(arr, key) {
+function payout(arr, obj, key) {
     let betWinners = [];
 
-    betWinners = arr.filter(winner => winner[key] === winningBets[key]);
+    betWinners = arr.filter(winner => winner[key] === obj[key]);
 
     let betPayout = arr.length / betWinners.length;
 
@@ -26,3 +19,5 @@ function payout(arr, key) {
 
     betWinners.forEach(winner => winner['winnings'] += betPayout);
 }
+
+sbProps(bets, players)
