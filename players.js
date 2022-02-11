@@ -37,6 +37,6 @@ const dad = new Player('Dad')
 
 
 
-let players = [ryan, zack];
+let players = [ryan, zack, drew];
 
 module.exports = players;
