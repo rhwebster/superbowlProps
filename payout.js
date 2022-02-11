@@ -5,6 +5,7 @@ function sbProps(obj, arr) {
     for (const key in obj) {
         payout(arr, obj, key)
     }
+    
     return arr.forEach(player => console.log(`${player.name} : ${player.winnings}`));
 }
 
@@ -20,4 +21,4 @@ function payout(arr, obj, key) {
     betWinners.forEach(winner => winner['winnings'] += betPayout);
 }
 
-sbProps(bets, players)
+sbProps(bets, players);
