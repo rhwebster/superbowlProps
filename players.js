@@ -32,9 +32,11 @@ const julian = new Player('Julian');
 
 const max = new Player('Max');
 
+const dad = new Player('Dad')
 
 
 
-let players = [ryan, zack, drew];
+
+let players = [ryan, zack];
 
 module.exports = players;
