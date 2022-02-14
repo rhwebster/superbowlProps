@@ -1,9 +1,9 @@
 const winningBets = {
-    coinToss: 'heads', anthem: null, firstPlayer: null, firstPlay: null,
-    firstHalfPts: null, nonQB: null, performer: null, halftimeSongs: null,
-    snoopSmoke: null, thirdQtrScore: null, twoPt: null, dstTD: null, highQtr: null,
-    bitcoinPrice: null, oneFifty: null, longestPlay: null, kuppChase: null,
-    staffordBurrow: null, gatorade: null, mvp: null, winner: 'rams'
+    coinToss: 'heads', anthem: 'over', firstPlayer: 'other', firstPlay: 'run',
+    firstHalfPts: 'odd', nonQB: 'yes', performer: 'dre', halftimeSongs: 'over',
+    snoopSmoke: 'no', thirdQtrScore: 'yes', twoPt: 'no', dstTD: 'no', highQtr: '3',
+    bitcoinPrice: 'no', oneFifty: 'under', longestPlay: 'over', kuppChase: 'under',
+    staffordBurrow: 'over', gatorade: 'blue', mvp: 'no', winner: 'bengals'
 }
 
 module.exports = winningBets;
