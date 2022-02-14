@@ -55,9 +55,6 @@ const jayson = new Player('Jayson', 'tails', 'over', 'stafford', 'pass', 'even',
     'over', 'orange', 'yes', 'rams');
 
 
-
-
-
 let players = [ryan, zack, drew, andy, em, 
                mara, dad, jimmy, alicia, chris, 
                jayson, becca, david];
