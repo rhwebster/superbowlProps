@@ -6,8 +6,7 @@ function sbProps(obj, arr) {
         payout(arr, obj, key)
     }
     
-    arr.sort((a,b) => b.winnings - a.winnings);
-    return arr.forEach(player => console.log(`${player.name} : ${player.winnings}`));
+    return arr.sort((a, b) => b.winnings - a.winnings).forEach(player => console.log(`${player.name} : ${player.winnings}`));
 }
 
 function payout(arr, obj, key) {
