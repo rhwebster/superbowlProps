@@ -1,7 +1,7 @@
 const bets = require('./bets');
 const players = require('./players');
 
-function sbProps(obj, arr) {
+const sbProps = (obj, arr) => {
     for (const key in obj) {
         payout(arr, obj, key)
     }
@@ -10,7 +10,7 @@ function sbProps(obj, arr) {
         .forEach(player => console.log(`${player.name} : ${player.winnings}`));
 }
 
-function payout(arr, obj, key) {
+const payout = (arr, obj, key) => {
     let betWinners = [];
 
     betWinners = arr.filter(player => player[key] === obj[key]);
